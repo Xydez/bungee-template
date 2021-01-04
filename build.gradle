@@ -1,0 +1,39 @@
+plugins {
+	id "java"
+}
+
+group "com.example"
+version "1.0.0"
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ["src"]
+		}
+		resources {
+			srcDirs = ["assets"]
+		}
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+	compileOnly "net.md-5:bungeecord-api:1.12-SNAPSHOT"
+}
+
+jar {
+	from configurations.compile.collect { fileTree("assets") }
+}
+
+
+// Deploy the jar to your Spigot server.
+/*
+task deploy(type: Copy) {
+	from jar
+	into "C:\\your_server\\plugins"
+}
+*/
