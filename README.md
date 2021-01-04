@@ -1,5 +1,5 @@
-# spigot-template
-spigot-template is a template repository for developing spigot plugins.
+# bungee-template
+bungee-template is a template repository for developing BungeeCord plugins.
 
 To get started, git clone the repository. Change the group property in build.gradle. Change the project name in settings.gradle. Finally, build the project.
 
